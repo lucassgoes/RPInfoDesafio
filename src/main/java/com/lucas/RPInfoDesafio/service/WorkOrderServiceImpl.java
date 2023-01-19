@@ -1,4 +1,4 @@
-package com.lucas.RPInfoDesafio.repository.service;
+package com.lucas.RPInfoDesafio.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -52,5 +52,32 @@ public class WorkOrderServiceImpl implements WorkOrderService{
 
 	    Pageable pageable = PageRequest.of(pageNum - 1, pageSize, sort);
 	    return this.workOrderRepository.findAll(pageable);
+	}
+
+	@Override
+	public WorkOrder updateWorkOrder(WorkOrder workOrder) {
+		Optional<WorkOrder> workOrderDb = this.workOrderRepository.findById(workOrder.getId());
+		
+		if(workOrderDb.isPresent()) {
+			WorkOrder workOrderUpdate = workOrderDb.get();
+			workOrderUpdate.setId(workOrder.getId());
+			workOrderUpdate.setClientName(workOrder.getClientName());
+			workOrderUpdate.setClientAddress(workOrder.getClientAddress());
+			workOrderUpdate.setClientContact(workOrder.getClientContact());
+			workOrderUpdate.setClientEmail(workOrder.getClientEmail());
+			workOrderUpdate.setEquipamentModel(workOrder.getEquipamentModel());
+			workOrderUpdate.setEquipamentBrand(workOrder.getEquipamentBrand());
+			workOrderUpdate.setEquipamentProblem(workOrder.getEquipamentProblem());
+			workOrderUpdate.setWorkOrderStatus(workOrder.getWorkOrderStatus());
+			workOrderRepository.save(workOrderUpdate);
+			return  workOrderUpdate;
+		}else {
+			throw new RuntimeException("Work order not found for id : " + workOrder.getId());
+		}
+	}
+
+	@Override
+	public WorkOrder createWorkOrder(WorkOrder workOrder) {
+		return workOrderRepository.save(workOrder);
 	}
 }

@@ -1,4 +1,4 @@
-package com.lucas.RPInfoDesafio.repository.service;
+package com.lucas.RPInfoDesafio.service;
 
 import java.util.List;
 
@@ -8,8 +8,10 @@ import com.lucas.RPInfoDesafio.model.WorkOrder;
 
 public interface WorkOrderService {
 	List<WorkOrder> getAllWorkOrders();
-	void saveWorkOrder(WorkOrder workOrder);
+	WorkOrder updateWorkOrder(WorkOrder workOrder);
 	WorkOrder getWorkOrderById(long id);
+	WorkOrder createWorkOrder(WorkOrder workOrder);
+	void saveWorkOrder(WorkOrder workOrder);
 	void deleteWorkOrderById(long id);
 	Page<WorkOrder> findPaginated(int pageNum, int pageSize, String sortField, String sortDirection);
 }

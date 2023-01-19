@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.lucas.RPInfoDesafio.model.WorkOrder;
 import com.lucas.RPInfoDesafio.model.workOrderStatus;
-import com.lucas.RPInfoDesafio.repository.service.WorkOrderService;
+import com.lucas.RPInfoDesafio.service.WorkOrderService;
 
 @Controller
 public class WorkOrderController {
@@ -50,7 +50,7 @@ public class WorkOrderController {
         return "update_workOrder";
     }
 	
-	@DeleteMapping("/delete/{id}")
+	@GetMapping("/delete/{id}")
     public String deleteWorkOrder(@PathVariable (value = "id") long id) {
  
         this.workOrderService.deleteWorkOrderById(id);
