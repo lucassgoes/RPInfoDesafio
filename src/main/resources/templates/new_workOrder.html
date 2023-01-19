@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Sistema de Ordem de serviço</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<div class="container">
+    <h1>Sistema de Ordem de serviço</h1>
+    <hr>
+    <h2>Adicionar ordem de serviço</h2>
+ 
+    <form action="#" th:action="@{/save}" th:object="${workOrder}"method="POST">
+          
+         <div class="mb-3">
+		  <label for="clientNameInput" class="form-label">Nome do cliente</label>
+		  <input type="text" th:field="*{clientName}" class="form-control" id="clientNameInput" placeholder="Ex: João Silva">
+		</div>
+		
+		<div class="mb-3">
+		  <label for="clientAddressInput" class="form-label">Endereço do cliente</label>
+		  <input type="text" th:field="*{clientAddress}" class="form-control" id="clientAddressInput" placeholder="Ex: Rua Ipê 1336">
+		</div>
+        
+        <div class="mb-3">
+		  <label for="clientContactInput" class="form-label">Contato do cliente</label>
+		  <input type="number" th:field="*{clientAddress}" class="form-control" id="clientContactInput" placeholder="Ex: (41) 9877-1055">
+		</div>
+        
+        <div class="mb-3">
+		  <label for="clientEmailInput" class="form-label">E-mail do cliente</label>
+		  <input type="email" th:field="*{clientEmail}" class="form-control" id="clientEmailInput" placeholder="Ex: joao@gmail.com">
+		</div>
+		
+		<hr>
+		
+		<div class="mb-3">
+		  <label for="equipamentBrandInput" class="form-label">Marca do equipamento</label>
+		  <input type="text" th:field="*{equipamentBrand}" class="form-control" id="equipamentBrandInput" placeholder="Ex: Samsung">
+		</div>
+		
+		<div class="mb-3">
+		  <label for="equipamentModelInput" class="form-label">Modelo do equipamento</label>
+		  <input type="text" th:field="*{equipamentModel}" class="form-control" id="equipamentModelInput" placeholder="Ex: Galaxy A32">
+		</div>
+		
+		<div class="mb-3">
+		  <label for="equipamentProblemInput" class="form-label">Descrição do problema do equipamento</label>
+		  <textarea th:field="*{equipamentProblem}" class="form-control" id="equipamentProblemInput" placeholder="Ex: Tela quebrada, muito lento e camêra suja." rows="3"></textarea>
+		</div>
+ 
+        <button type="submit" class="btn btn-info col-2"> Salvar ordem de serviço</button>
+    </form>
+ 
+    <hr>
+ 
+    <a th:href = "@{/}"> Voltar para listagem de ordens de serviço</a>
+</div>
+</body>
+</html>
