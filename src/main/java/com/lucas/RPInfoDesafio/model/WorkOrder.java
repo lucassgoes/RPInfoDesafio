@@ -27,6 +27,12 @@ public class WorkOrder {
 	
 	private String orderObservation;
 	
+	public WorkOrder() {}
+	
+	public WorkOrder(String clientName) {
+		this.clientName = clientName;
+	}
+	
 	public Long getId() {
 		return id;
 	}

@@ -2,8 +2,6 @@
 
 Aplicação REST para registro de ordem de serviço utilizando Spring boot.
 
-##Como rodar a Aplicação
-Só clonar o repositório exportar para a IDE como  projeto Maven e rodar a classe RpInfoApiApplication.
-
-Depois acesse [http://localhost:8080](http://localhost:8080) no navegador.
+## Como rodar a Aplicação
+Só clonar o repositório e exportar para a IDE como projeto Maven depois rodar a classe RpInfoApiApplication e acessar [http://localhost:8080](http://localhost:8080) no navegador.
 
