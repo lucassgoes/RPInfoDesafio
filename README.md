@@ -59,6 +59,7 @@ Requisições para a API devem seguir os padrões:
 ## Documentação das telas
 ### Tela de listagem de ordem de serviço
 ![INDEX](INDEX.png)
+
 Listagem da ordens de serviço
 Ações do usuário:
 + Adicionar nova ordem de serviço clicando no botão "Adicionar nova ordem de serviço"
@@ -67,12 +68,14 @@ Ações do usuário:
 
 ### Tela de criação de ordem de serviço
 ![ADD](ADD.png)
+
 Formulário para criação de uma ordem de serviço
 Ações do usuário:
 + Adicionar as informações do cliente e do equipamento e salvar
 
 ### Tela de alteração de ordem de serviço
 ![UPDATE](UPDATE.png)
+
 Formulário para alteração de uma ordem de serviço
 Ações do usuário:
 + Adicionar as informações do cliente e do equipamento e salvar
