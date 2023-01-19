@@ -38,7 +38,6 @@
 	<td th:text="${workOrder.equipamentModel}"></td>
 	<td th:text="${workOrder.workOrderStatus}"></td>
 	<td> 
-		<a th:href="@{/update/{id}(id=${workOrder.id})}" class="btn btn-primary">Detalhes</a>
 		<a th:href="@{/update/{id}(id=${workOrder.id})}" class="btn btn-warning">Alterar</a>
 		<a th:href="@{/delete/{id}(id=${workOrder.id})}" class="btn btn-danger">Deletar</a>
 	</td>

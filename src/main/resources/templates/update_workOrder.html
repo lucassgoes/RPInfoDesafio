@@ -9,9 +9,9 @@
 </head>
 <body>
 <div class="container">
-    <h1>Course Tracker</h1>
+    <h1>Sistema de Ordem de serviço</h1>
     <hr>
-    <h2>Update Course</h2>
+    <h2>Alterar ordem de serviço</h2>
  
     <form action="#" th:action="@{/save}" th:object="${workOrder}"
           method="POST">
@@ -30,7 +30,7 @@
         
         <div class="mb-3">
 		  <label for="clientContactInput" class="form-label">Contato do cliente</label>
-		  <input type="number" th:field="*{clientAddress}" class="form-control" id="clientContactInput" placeholder="Ex: (41) 9877-1055">
+		  <input type="number" th:field="*{clientContact}" class="form-control" id="clientContactInput" placeholder="Ex: (41) 9877-1055">
 		</div>
         
         <div class="mb-3">
@@ -54,6 +54,7 @@
 		  <label for="equipamentProblemInput" class="form-label">Descrição do problema do equipamento</label>
 		  <textarea th:field="*{equipamentProblem}" class="form-control" id="equipamentProblemInput" placeholder="Ex: Tela quebrada, muito lento e camêra suja." rows="3"></textarea>
 		</div>
+		
         <button type="submit" class="btn btn-info col-2"> Atualizar ordem de serviço</button>
     </form>
  
