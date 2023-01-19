@@ -28,3 +28,51 @@ Requisições para a API devem seguir os padrões:
 | `POST` | /api/workOrders | 
 | `PUT` | /api/workOrders/{id} |
 | `DELETE` | /api/workOrders/{id} |
+
++ Body da requisição de POST
+
+            {
+              "clientName": String,
+              "clientAddress": String,
+              "clientContact": String,
+              "clientEmail": String,
+              "equipamentModel": String,
+              "equipamentBrand": String,
+              "equipamentProblem": String,
+              "workOrderStatus": ENUM["OPEN", "ONGOING", "CLOSED"]
+            }
+
++ Body da requisição de PUT neceessário inserir o campo id
+
+            {
+              "id": Long,
+              "clientName": String,
+              "clientAddress": String,
+              "clientContact": String,
+              "clientEmail": String,
+              "equipamentModel": String,
+              "equipamentBrand": String,
+              "equipamentProblem": String,
+              "workOrderStatus": ENUM["OPEN", "ONGOING", "CLOSED"]
+            }
+            
+## Documentação das telas
+### Tela de listagem de ordem de serviço
+![INDEX](INDEX.png)
+Listagem da ordens de serviço
+Ações do usuário:
++ Adicionar nova ordem de serviço clicando no botão "Adicionar nova ordem de serviço"
++ Alterar ordem de serviço clicando no botão "Alterar"
++ Deletar ordem de serviço clicando no botão "Deletar"
+
+### Tela de criação de ordem de serviço
+![ADD](ADD.png)
+Formulário para criação de uma ordem de serviço
+Ações do usuário:
++ Adicionar as informações do cliente e do equipamento e salvar
+
+### Tela de alteração de ordem de serviço
+![UPDATE](UPDATE.png)
+Formulário para alteração de uma ordem de serviço
+Ações do usuário:
++ Adicionar as informações do cliente e do equipamento e salvar
